@@ -15,9 +15,10 @@ function App() {
       <div className="AppContainer">
         <div className='TopNav col-12'>
           <ul>Home</ul>
-          <ul>Test1</ul>
-          <ul>Test2</ul>
           <ul>Profile</ul>
+          <ul></ul>
+          <ul></ul>
+          <ul></ul>
           <div className = "LoginContainer">
             <p>Test_ID</p>
             <button>Sign in</button>
