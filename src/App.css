@@ -1,38 +1,57 @@
-.App {
-  text-align: center;
+.App{
+  width: 100vw;
+  height: 100vh;
+  background : #F9F9F9;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.AppContainer {
+  display: grid;
+  width: calc(100vw - max((100vw - 1440px),0px));
+  height: 100%;
+  margin-left: max(calc((100vw - 1440px) / 2),0px);
+  margin-right: max(calc((100vw - 1440px) / 2),0px);
+  grid-template-columns: repeat(12,1fr);
+  grid-template-rows: 50px auto;
+  column-gap: 10px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.TopNav{
   display: flex;
-  flex-direction: column;
+  grid-column-start: 1;
+  grid-column-end: 13;
+  height: 50px;
+  background: #F9F9F9;
+  border-bottom: 0.2rem solid black;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.TopNav ul{
+  font-weight: 700;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.TopNav ul:hover{
+  font-weight: 700;
+  color: lightgray;
+}
+
+.LoginContainer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.LoginContainer p,button{
+  margin-right: 1rem;
+}
+
+.Title{
+  grid-column-start: 4;
+  grid-column-end: 10;
+  grid-row: 2;
+  height: 40px;
+  text-align: center;
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin: 2.6rem;
 }
