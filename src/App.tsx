@@ -5,15 +5,15 @@ import RoomModel from './Component/RoomModel';
 
 function App() {
   let rooms = [];
-  for(let i = 0; i<30; i++)
+  for(let i = 0; i<31; i++)
   {
-    rooms.push(<RoomModel start={1+(i*2)%12} end={3+(i*2)%12} row={3+(i/6)} />);
+    rooms.push(<RoomModel/>);
   }
 
   return (
     <div className="App">
       <div className="AppContainer">
-        <div className='TopNav'>
+        <div className='TopNav col-12'>
           <ul>Home</ul>
           <ul>Test1</ul>
           <ul>Test2</ul>
@@ -24,7 +24,7 @@ function App() {
             <button>Login</button>
           </div>
         </div>
-        <div className='Title'>Left & Right</div>
+        <div className='Title col-12'>Left & Right</div>
         {rooms}
       </div>
     </div>

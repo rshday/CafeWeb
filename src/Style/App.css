@@ -15,8 +15,6 @@
 }
 .TopNav{
   display: flex;
-  grid-column-start: 1;
-  grid-column-end: 13;
   height: 50px;
   background: #F9F9F9;
   border-bottom: 0.2rem solid black;
@@ -66,14 +64,12 @@
   align-content: flex-start;
 }
 
-.col13
+.col-2
 {
-  grid-column-start: 1;
-  grid-column-end: 3;
+  grid-column: span 2 / span 2;
 }
 
-.col35
+.col-12
 {
-  grid-column-start: 3;
-  grid-column-end: 5;
+  grid-column: span 12 / span 12;
 }
