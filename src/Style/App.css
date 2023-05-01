@@ -1,5 +1,5 @@
 .App{
-  width: 100vw;
+  width: calc(100vw - 2rem);
   height: 100vh;
   background : #F9F9F9;
 }
@@ -10,7 +10,7 @@
   margin-left: max(calc((100vw - 1440px) / 2),0px);
   margin-right: max(calc((100vw - 1440px) / 2),0px);
   grid-template-columns: repeat(12,1fr);
-  grid-template-rows: 50px auto;
+  grid-template-rows: 50px 10rem auto;
   column-gap: 10px;
 }
 .TopNav{
@@ -54,4 +54,26 @@
   font-size: 2.6rem;
   font-weight: 700;
   margin: 2.6rem;
+}
+
+.RoomContainer
+{
+  display: flex;
+  grid-row: 3;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  align-content: flex-start;
+}
+
+.col13
+{
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.col35
+{
+  grid-column-start: 3;
+  grid-column-end: 5;
 }
