@@ -17,6 +17,7 @@ function App() {
         temp.push(<RoomModelView data={rm}/>);
       });
       set_rooms(temp);
+      console.log(temp)
     })
     .catch(error => console.log(error));
   }, []);

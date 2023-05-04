@@ -7,8 +7,8 @@ function RoomModelView({data} : {data:RoomModel}) {
     <div className="RoomModel col-2">
       <div className="RmTitle">{data.name}</div>
       <img className='RmImg' alt="none" src={data.image_url}/>
-      <p>서울시 용산구</p>
-      <p>평점 : 10</p>
+      
+      <p>사용자 총 평점 : <b>{data.average_rating}</b> / <b>5</b></p>
     </div>
   );
 }
