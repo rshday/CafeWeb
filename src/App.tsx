@@ -1,51 +1,34 @@
 /*eslint-disable*/
-import React,{  useEffect, useState } from 'react';
-import './Style/App.css';
-import RoomModelView from './Component/RoomModelView';
-import axios from 'axios';
-import { RoomModel } from './Model/RoomModel';
+import MainView from './View/MainView';
+import RoomDetailView from './View/RoomDetailView';
+import './Style/Common/app.css'
+import './Style/Common/gridContainer.css'
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
 function App() {
-  let [rooms,set_rooms] = useState(Array<JSX.Element>);
-
-  useEffect(() => {
-    axios.get<RoomModel[]>('/api/v1/rooms')
-    .then(reponse => {
-      const result = reponse.data;
-      const temp:Array<JSX.Element> = [];
-      result.forEach(rm=>{
-        temp.push(<RoomModelView data={rm}/>);
-      });
-      set_rooms(temp);
-      console.log(temp)
-    })
-    .catch(error => console.log(error));
-  }, []);
-
-  // for(let i = 0; i<31; i++)
-  // {
-  //   rooms.push(<RoomModel/>);
-  // }
-
   return (
-    <div className="App">
-      <div className="AppContainer">
-        <div className='TopNav col-12'>
-          <ul>Home</ul>
-          <ul>Profile</ul>
-          <ul></ul>
-          <ul></ul>
-          <ul></ul>
-          <div className = "LoginContainer">
-            <p>Test_ID</p>
-            <button>Sign in</button>
-            <button>Login</button>
-          </div>
+    <BrowserRouter>
+      <div className="gridApp">
+        <div className="gridContainer">
+          <nav className='TopNav col-12'>
+              <Link to={'/'}>Home</Link>
+              <Link to={'/profile'}>Profile</Link>
+              <ul></ul>
+              <ul></ul>
+              <ul></ul>
+              <div className = "LoginContainer">
+                  <p>Test_ID</p>
+                  <button>Sign in</button>
+                  <button>Login</button>
+              </div>
+          </nav>
+          <Routes>
+            <Route path='/' element={<MainView/>} />
+            <Route path='/detail/:index' element={<RoomDetailView/>} />
+          </Routes>
         </div>
-        <div className='Title col-12'>Left & Right</div>
-        {rooms}
       </div>
-    </div>
+    </BrowserRouter>
   );
 }
 

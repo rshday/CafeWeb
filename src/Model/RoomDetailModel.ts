@@ -1,4 +1,4 @@
-export interface RoomModel {
+export interface RoomDetailModel {
     pk : number;
     name: string;
     image_url: string;

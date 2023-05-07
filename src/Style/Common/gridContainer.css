@@ -1,0 +1,38 @@
+    .gridApp{
+        width: calc(100vw - 2rem);
+        height: 100vh;
+        background : #F9F9F9;
+        min-width: 1440px;
+    }
+
+    .gridContainer{
+        display: grid;
+        width: max(1440px,calc(100vw - max((100vw - 1440px),0px)));
+        height: 100%;
+        margin-left: max(calc((100vw - 1440px) / 2),0px);
+        margin-right: max(calc((100vw - 1440px) / 2),0px);
+        grid-template-columns: repeat(12,1fr);
+        grid-template-rows: 50px auto;
+        column-gap: 10px;
+    }
+
+    .gridPage{
+        display: grid;
+        margin: 0px;
+        grid-column: span 12 / span 12;
+        height: 100%;
+        grid-template-columns: repeat(12,1fr);
+        grid-template-rows: auto;
+        column-gap: 10px;
+        margin-top: 10px;
+    }
+
+    .col-2
+    {
+      grid-column: span 2 / span 2;
+    }
+    
+    .col-12
+    {
+      grid-column: span 12 / span 12;
+    }

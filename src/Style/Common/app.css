@@ -1,0 +1,31 @@
+  .TopNav{
+    display: flex;
+    height: 50px;
+    background: #F9F9F9;
+    border-bottom: 0.2rem solid black;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .TopNav a{
+    font-weight: 700;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .TopNav a:hover{
+    font-weight: 700;
+    color: lightgray;
+  }
+  
+  .LoginContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .LoginContainer p,button{
+    margin-right: 1rem;
+  }
