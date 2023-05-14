@@ -5,7 +5,7 @@
     border-bottom: 0.2rem solid black;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
   }
   
@@ -14,18 +14,85 @@
     text-decoration: none;
     color: inherit;
   }
-  
-  .TopNav a:hover{
-    font-weight: 700;
-    color: lightgray;
-  }
-  
-  .LoginContainer{
+
+  .Logo{
     display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
     flex-direction: row;
-    align-items: center;
+    width: 14rem;
+    font-weight: 900;
+    font-size: 1.7rem;
+  }
+
+  .User{
+    position: relative;
+    display : inline-block;
+  }
+
+  .UserContainer{
+    position: relative;
+  }
+  .UserBtn{
+    height: 100%;
+    width: 2rem;
+    cursor: pointer;
+  }
+
+  .UserBtn:hover{
+    width: 2.1rem;
+  }
+
+  .UserContent{
+    display: none;
+    position: absolute;
+    right: 1%;
+    z-index : 1;
+    background: white;
+    cursor: pointer;
+    width: 10rem;
+    text-align: center;
+    margin-top: 5px;
+    padding: 10px;
+    font-size: 0.9rem;
+    border-radius: 12px;
+    box-shadow: 5px 5px 5px 5px gray;
+  }
+  .UserContent ul{
+    padding: 0.3rem;
+    margin: 0px;
+  }
+
+  .UserContent ul:hover{
+    background: rgb(235, 235, 235);
+  }
+
+  #modalWrap {
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4); 
   }
   
-  .LoginContainer p,button{
-    margin-right: 1rem;
+  #modalBody {
+    width: 550px;
+    height: 620px;
+    padding: 10px;
+    margin: 50px auto;
+    border-radius: 12px;
+    box-shadow: 5px 5px 5px 5px gray;
+    background-color: #fff;
+  }
+  
+  .closeBtn {
+    float:right;
+    font-weight: bold;
+    color: #777;
+    font-size:2rem;
+    cursor: pointer;
   }
