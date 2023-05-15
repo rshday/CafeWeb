@@ -1,12 +1,13 @@
 /*eslint-disable*/
 import MainView from './View/MainView';
-import React,{  MouseEventHandler, useState } from 'react';
+import React,{ useState } from 'react';
 import RoomDetailView from './View/RoomDetailView';
-import './Style/Common/app.css'
-import './Style/Common/gridContainer.css'
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import { HiUserCircle } from "react-icons/hi2";
 import { BsFillDoorClosedFill } from "react-icons/bs";
+import './Style/Common/app.css'
+import './Style/Common/gridContainer.css'
+import './Fonts/fonts.css'
 
 function App() {
   const [userContentDisplay,setUserContentDisplay] = useState("none");

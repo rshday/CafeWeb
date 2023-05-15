@@ -7,12 +7,13 @@
     align-items: flex-start;
     margin: 0PX;
     margin-bottom: 10px;
+    font-family: Dovemayo_gothic;
 }
 
 .RmBrand{
     display: block;
     font-weight: 500;
-    font-size: 0.rem;
+    font-size: 0.8rem;
     text-align: start;
     margin: 0.1rem;
     overflow: hidden;
@@ -44,6 +45,7 @@
 .RmRateContainer{
     display: flex;
     align-items: center;
+    margin-right: 0.5rem;
 }
 .RmRate{
     font-size: 0.9rem;
