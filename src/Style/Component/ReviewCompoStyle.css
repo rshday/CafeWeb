@@ -1,0 +1,36 @@
+#reviewItemContainer{
+    display: flex;
+    flex-direction: row;
+    background: white;
+    width: 100%;
+    height: 4rem;
+    align-items: center;
+    padding: 0.5rem;
+    border-bottom: 1px solid gray;
+}
+
+#userImg{
+    width: 3rem;
+    border-radius: 8px;
+}
+
+#userName{
+    margin-left: 0.5rem;
+    width: 10rem;
+    font-weight: 700;
+}
+#pointBoxContainer{
+    display: flex;
+    width: 70%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.pointBox{
+    background: green;
+    border-radius: 4px;
+    width: 3rem;
+    text-align: center;
+    color: white;
+}

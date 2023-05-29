@@ -25,6 +25,7 @@
         grid-template-rows: auto;
         column-gap: 10px;
         margin-top: 10px;
+        font-family: Dovemayo_gothic;
     }
 
     .col-2

@@ -16,7 +16,7 @@ function MainView() {
     
     useEffect(() => {
         vm.initial();
-    });
+    },[]);
 
     return (
         <div className='gridPage'>

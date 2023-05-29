@@ -1,20 +1,18 @@
 .topItem{
-    grid-row: 1;
-    border: 1px solid rgba(146, 146, 146, 0.747);
-    grid-column: span 6 / span 6;
     width: 100%;
-    height: 50%;
+    height: 270px
 }
 
 .imgBox{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    grid-column: span 3 / span 3;
 }
 
 .mainImg{
-    width: 40%;
-    height: 80%;
+    width: 80%;
+    height: 100%;
 }
 
 .detailContainer{
@@ -22,46 +20,127 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    grid-column: span 9 / span 9;
 }
 
 .detailContainer p{
     margin: 5px;
     margin-left: 2rem;
     color: #222;
-    
+}
+
+#topRowContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+#titleContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 #title{
     font-size: 1.4rem;
     font-weight: 700;
-    margin-top: 2rem;
 }
 
-#adress{
-    font-size: 0.7rem;
-    font-weight: 600;
-    margin-left: 2.2rem;
+.genreBox{
+    border-radius: 8px;
+    background: red;
+    padding: 0.1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    color: white;
 }
 
-#point{
-    margin-top: 2rem;
-    font-size: 1.1rem;
-    font-weight: 400;
+.bar{
+    border-bottom: 2px solid gray;
+    width: 100%;
 }
 
-.pointBox{
+#brandContainer{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+
+#brandInfo{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    margin: 2rem;
-    border: 1px solid rgba(146, 146, 146, 0.747);
-    height: 50%;
-    width: calc(100% - 4rem);
+    height: 100%;
+    width: 80%;
+    justify-content: space-between;
 }
 
-.pointBox p{
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: #222;
+#brandBtnContainer{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 20%;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+#wishAddBtn{
+    border-radius: 8px;
+    background: rgb(18, 129, 167);
+    padding: 0.5rem;
+    color: white;
+    text-align: center;
+}
+
+#bookBtn{
+    border-radius: 8px;
+    background: rgb(71, 71, 71);
+    padding: 1rem;
+    color: white;
+    text-align: center;
+    width: 12rem;
+    text-decoration : none;
+}
+
+#userContentContainer{
+    grid-column: span 12 / span 12;
+    height: calc(100vh - 320px - 2rem);
+    width: 100%;
+    border-top: 2px solid gray;
+    margin-top: 2rem;
+}
+
+#inputContainer{
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    justify-content: space-between;
+}
+#inputTitle{
+    margin-left: 2rem;
+    margin-right: 1rem;
+}
+#inputContainer select{
+    margin-right: 0.5rem;
+    width: 8rem;
+}
+
+#pointInputBtn{
+    border-radius: 8px;
+    background: rgb(71, 71, 71);
+    padding: 0.5rem;
+    color: white;
+    text-align: center;
+}
+
+#reviewContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
 }

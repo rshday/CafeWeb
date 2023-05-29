@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { RoomDetailModel } from '../Model/RoomDetailModel';
+import { ReviewModel } from '../Model/ReviewModel';
 
 export default class RoomDetailViewModel{
     state: any;
@@ -14,13 +15,33 @@ export default class RoomDetailViewModel{
     initial()
     {
         this.getRoomDetailData();
+        this.getReviewData();
     }
     
 
     async getRoomDetailData()
     {
-        const res = await axios.get<RoomDetailModel>('/api/v1/rooms/'+this.index);
-        this.state.setImg(res.data.image_url);
-        this.state.setTitle(res.data.name);
+        try{
+            const res = await axios.get<RoomDetailModel>('/api/v1/rooms/'+this.index);
+            this.state.setRoomDetailModel(res.data);
+            console.log(res.data)
+        }
+        catch(error)
+        {
+            console.log(error)
+        }
+    }
+
+    async getReviewData()
+    {
+        try{
+            const res = await axios.get<ReviewModel>('/api/v1/rooms/'+this.index+'/reviews');
+            this.state.setReviewModels(res.data);
+            console.log(res.data)
+        }
+        catch(error)
+        {
+            console.log(error)
+        }
     }
 }
